@@ -1,0 +1,19 @@
+#myVideo {
+position: fixed;
+top: 0;
+right:0;
+bottom: 0;
+left: 0;
+min-width: 100%;
+min-height: 100%;
+}
+
+.row{
+    position: fixed;
+    top: 20vh;
+    bottom: 50vh;
+    left: 5vw;
+    max-width: 20%;
+    min-width: 75%;
+}
+

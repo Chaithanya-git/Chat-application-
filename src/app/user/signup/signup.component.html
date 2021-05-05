@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">My Chat</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home"(click)="goToSignIn()">Sign-In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <video id="myvideo" autoplay loop muted>
+    <source src="../../assets/vid2.mp4" type="video/mp4">
+  </video>
+  <div class="row">
+    <div class="col-md-6 offset-md-3 mt-4">
+        <h3>Register To Login</h3>
+        <form #f="ngForm"
+              (ngSubmit)="signUpFunction()">
+            <div class="form-group">
+                <label for="registerfirstname">First Name</label>
+                <input type="text"
+                       name="firstname"
+                       required [(ngModel)]="firstName"
+                       class="form-control"
+                       id="registerfirstname"
+                       placeholder="Enter firstname" required>
+            </div>
+            <div class="form-group">
+                <label for="registerlastname">Last Name</label>
+                <input type="text"
+                       name="lastname"
+                       required [(ngModel)]="lastName"
+                       class="form-control"
+                       id="registerlastname"
+                       placeholder="Enter lastname" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile</label>
+                <input type="text"
+                       name="mobile"
+                       required [(ngModel)]="mobile"
+                       class="form-control"
+                       id="mobile"
+                       placeholder="Enter mobile number" required>
+            </div>
+            <div class="form-group">
+                <label for="registerEmail">Email</label>
+                <input type="email"
+                       name="email"
+                       required [(ngModel)]="email"
+                       class="form-control"
+                       id="registerEmail"
+                       placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label for="registerPassword">Password</label>
+                <input type="password"
+                       name="password"
+                       required [(ngModel)]="password"
+                       class="form-control"
+                       id="registerPassword"
+                       placeholder="Password" required>
+            </div>
+            <button type="submit"
+                    [disabled]="!f.form.valid"
+                    class="btn btn-primary"(click)="signUpFunction()"> Register <i class="fas fa-sign-in-alt"></i></button>
+        </form>
+    </div>
+</div>
